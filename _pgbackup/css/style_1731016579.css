@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.topmenu {
+    background-color: #ffc300;
+    font-family: 'Alkalami', serif;
+    box-shadow: 3px 4px;
+    padding: 0 5px;
+    margin: 6px;
+    max-width: 395px;
+    overflow: hidden;
+}
+
+.topmenu_author {
+    height: 32px;
+    overflow: hidden;
+    float: none;
+    clear: both;
+    text-align: left;
+    width: 127px;
+    font-size: 21px;
+}
+
+.topmenu_text {
+    height: 48px;
+}

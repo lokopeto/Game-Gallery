@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alkalami', serif;
+}
+
+body {
+    background-color: black;
+}
+
+.topmenu {
+    padding: 0px 5px;
+    margin: 2px;
+}
+
+.topmenu_author {
+    background-color: #ffc300;
+    float: none;
+    clear: both;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-size: 21px;
+}
+
+.topmenu_text {
+    background-color: #ffc300;
+    font-size: 40px;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+    text-align: left;
+    line-height: 46px;
+}
+
+/* Style each folder */
+.folder {
+    max-width: 100%;
+    box-sizing: border-box;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    border-bottom-width: 3px;
+}
+
+/* Make images responsive using CSS Grid */
+.folder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 8px;
+    background-color: black;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+@media (min-width: 481px) {
+    .folder {
+        grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    }
+}
+
+.gallery-name {
+    background-color: white;
+    height: 35px;
+    text-align: center;
+    border-top-style: solid;
+}
+
+.image-item {
+    width: 100%;
+
+    /* Allow height to auto-adjust */
+    aspect-ratio: 16 / 9;
+
+    /* Set aspect ratio for consistency */
+    object-fit: cover;
+    transition: box-shadow 100ms, transform 200ms;
+    box-shadow: 0px 0px 0px 0px #fec300;
+    cursor: pointer;
+    transition-delay: 60ms;
+}
+
+.image-item:hover {
+    box-shadow: 0px 5px 0px 0px #fec300;
+    transition-duration: 50ms;
+    transition-delay: 0ms;
+}
+
+
