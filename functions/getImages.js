@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path'); // Add this line to import the path module
+
 exports.handler = async (event, context) => {
     const galleryDir = path.join(__dirname, '../public/gallery');
     console.log('Resolved gallery path:', galleryDir);
