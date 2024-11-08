@@ -1,12 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async (event, context) => {
-    const galleryDir = path.resolve(__dirname, '../gallery');
-    const images = [];
+    const galleryDir = path.join(__dirname, '../public/gallery');
+    console.log('Resolved gallery path:', galleryDir);
 
+    const images = [];
     try {
         const folders = fs.readdirSync(galleryDir);
+        console.log('Folders found:', folders);
 
         folders.forEach(folder => {
             const folderPath = path.join(galleryDir, folder);
@@ -26,9 +25,10 @@ exports.handler = async (event, context) => {
             body: JSON.stringify(images),
         };
     } catch (error) {
+        console.error('Error accessing gallery:', error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: 'Failed to load images' }),
+            body: JSON.stringify({ error: 'Failed to load images', details: error.message }),
         };
     }
 };
