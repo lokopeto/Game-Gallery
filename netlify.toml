@@ -6,3 +6,7 @@
   from = "/images"
   to = "/.netlify/functions/getImages"
   status = 200
+
+[[functions]]
+  directory = "functions"
+  included_files = ["functions/gallery/**"]
