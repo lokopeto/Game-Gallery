@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
-    const galleryDir = path.resolve(__dirname, '../gallery');
+    const galleryDir = path.join(__dirname, '../public/gallery');
     const images = [];
 
     try {
