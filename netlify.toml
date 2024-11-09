@@ -1,11 +1,8 @@
 [build]
-  functions = "functions"  # Path to your serverless functions
-  publish = "public"       # Path to your static site (public folder)
+  functions = "dist_functions"
+  publish = "public"
 
 [[redirects]]
   from = "/images"
   to = "/.netlify/functions/getImages"
   status = 200
-
-[[functions]]
-  included_files = ["functions/gallery/**"]

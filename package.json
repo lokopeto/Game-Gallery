@@ -13,5 +13,12 @@
     "@types/express": "^5.0.0",
     "express": "^4.21.1",
     "serverless-http": "^3.2.0"
+  },
+  "scripts": {
+  "build:functions": "zip-it-and-ship-it functions dist_functions"
+  },
+  "devDependencies": {
+    "@netlify/zip-it-and-ship-it": "^9.41.1"
   }
 }
+

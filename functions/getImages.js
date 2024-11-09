@@ -1,15 +1,12 @@
 const fs = require('fs');
-const path = require('path'); // Add this line to import the path module
+const path = require('path');
 
-exports.handler = async (event, context) => {
-    const galleryDir = path.join(__dirname, 'gallery'); // Adjust path since it's now in functions
-    console.log('Resolved gallery path:', galleryDir);
-
+exports.handler = async () => {
+    const galleryDir = path.join(__dirname, 'gallery'); // Adjust if needed after testing
     const images = [];
+
     try {
         const folders = fs.readdirSync(galleryDir);
-        console.log('Folders found:', folders);
-
         folders.forEach(folder => {
             const folderPath = path.join(galleryDir, folder);
             if (fs.lstatSync(folderPath).isDirectory()) {
